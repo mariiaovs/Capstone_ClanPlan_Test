@@ -1,5 +1,5 @@
 import FamilyMembersList from "@/components/FamilyMembersList";
-import MemberForm from "@/components/Form";
+import MemberForm from "@/components/MemberForm";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -23,7 +23,7 @@ const StyledSection = styled.section`
   padding: 20px;
 `;
 
-export default function FamilyPage({ familyMembers }) {
+export default function FamilyPage({ familyMembers, handleAddMember }) {
   const [modal, setModal] = useState(false);
 
   return (
@@ -68,7 +68,7 @@ export default function FamilyPage({ familyMembers }) {
         <>
           <StyledDiv onClick={() => setModal(false)}></StyledDiv>
           <StyledSection>
-            <MemberForm />
+            <MemberForm handleAddMember={handleAddMember} />
           </StyledSection>
         </>
       )}

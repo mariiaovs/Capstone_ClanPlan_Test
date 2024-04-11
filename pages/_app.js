@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} familyMembers={familyMembers} />
+      <Component {...pageProps} familyMembers={familyMembers} handleAddMember={handleAddMember}/>
     </>
   );
 }
